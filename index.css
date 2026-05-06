@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #141414;
+    --bg-3: #1c1c1c;
+    --ink: #f5f5f0;
+    --ink-2: #bcbcb6;
+    --ink-3: #7a7a74;
+    --rust: #d4441f;
+    --rust-2: #a8341a;
+    --gold: #d4a017;
+    --green: #5a8a3a;
+    --blue: #3a8ad4;
+    --purple: #8a3ad4;
+    --line: #2a2a2a;
+    --line-2: #3a3a3a;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    direction: rtl;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-rust { color: var(--rust); }
+  .text-gold { color: var(--gold); }
+  .text-green { color: var(--green); }
+  .text-blue { color: var(--blue); }
+  .text-purple { color: var(--purple); }
+  .text-ink-2 { color: var(--ink-2); }
+  .text-ink-3 { color: var(--ink-3); }
+
+  .bg-rust { background-color: var(--rust); }
+  .bg-gold { background-color: var(--gold); }
+  .bg-green { background-color: var(--green); }
+  .bg-blue { background-color: var(--blue); }
+  .bg-purple { background-color: var(--purple); }
+
+  .border-rust { border-color: var(--rust); }
+  .border-gold { border-color: var(--gold); }
+  .border-green { border-color: var(--green); }
+  .border-blue { border-color: var(--blue); }
+  .border-purple { border-color: var(--purple); }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--bg-2);
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--rust);
+    border-radius: 3px;
+  }
+}
